@@ -1,0 +1,143 @@
+.aha{
+  display: flex;
+  margin-top: 10%;
+}
+#app {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-end;
+  }
+  
+  .doors2 {
+        display: flex;
+      background-image: url(https://development.jut-so.de/kognidu/wp-content/uploads/2021/01/Group-488.svg);
+      margin-top: 55px;
+      background-size: contain;
+      background-position: center;
+      background-repeat: no-repeat;
+  }
+  .lever2{
+    position:relative;
+    cursor:pointer;
+  }
+  .lever2:after {
+    content:'';
+    background-image:url('https://development.jut-so.de/kognidu/wp-content/uploads/2021/01/Group-494.svg');
+    width:50px;
+    height:100px;
+    background-size:contain;
+    background-position:center;
+    background-repeat:no-repeat;
+    position:absolute;
+    top: -95px;
+    right: -62px;
+  }
+  
+  .lever2.clicked:after{
+     transform: scaley(1.0) translate(0px, 0px);
+    animation-name: levelanimate;
+    animation-duration: 0.3s;
+    animation-iteration-count: 2;
+    animation-direction: alternate;
+    animation-timing-function: ease-in-out;
+  }
+  
+  @keyframes levelanimate {
+    0% {  
+      transform: translate(0px, 0px) scaley(1.0) ;
+   }
+   75% {
+      transform: translate(15px, 120px) scaley(0.0); 
+    }
+    
+    100% {
+      transform: translate(5px, 220px) scaley(-1.0); 
+    }
+  
+  }
+  
+  .door2 {
+      width: 100px;
+      height: 150px;
+      overflow: hidden;
+      border-radius: 30px;
+      margin: 0px 2ch;
+  }
+  
+  .boxes2 {
+    transition: transform 1s ease-in-out;
+    background-color: #1d1d1d;
+  }
+  
+  .box {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 3rem;
+  }
+  
+  .box img{
+    width:70px;
+  }
+  
+  .buttons {
+    margin: 1rem 0 2rem 0;
+  }
+  
+  button {
+    cursor: pointer;
+  
+    font-size: 1.2rem;
+    text-transform: uppercase;
+  
+    margin: 0 0.2rem 0 0.2rem;
+  }
+  
+  .info2 {
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+    background-color:#fff;
+  }
+  
+  .info2 img,
+  .info2{
+    height:30px;
+    vertical-align:middle;
+    display: none;
+  }
+  
+
+  .test1 {
+    display: none;
+  }
+
+  img {
+    border-radius: 10%;
+  }
+  body {
+    background-color: #1a1a1a;
+    color: #fff;
+  }
+  button {
+    background-color: #1d1d1d;
+    color: #fff;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    font-size: 16px;
+    cursor: pointer;
+  }
+  
+  button:hover {
+    background-color: #404040;
+  }
+  
+  button:active {
+    background-color: #292929;
+  }
+  
